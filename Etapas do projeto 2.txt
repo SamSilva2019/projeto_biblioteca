@@ -1,0 +1,44 @@
+Primeira fase: Planejamento do projeto
+
+1.	Planejamento do projeto:
+a.	Descrição do contexto do projeto
+b.	Defina o escopo do projeto e detalhe as atividades
+
+2.	Identidade visual do projeto
+a.	Definição das cores
+b.	Definição das fontes
+c.	Definição do logo
+
+3.	Versionamento do projeto:
+a.	Criação do repositório
+b.	Criação do Readme.md
+
+4.	Idealização das telas:
+a.	Desenvolver os wireframes do projeto
+
+5.	Modelagem do sistema:
+a.	Definição das funcionalidades
+b.	Definição dos recursos a serem usados
+
+6.	Modelagem do banco:
+a.	Desenvolver o DER
+b.	Desenvolver o MER
+
+Segunda fase: Implementação do projeto
+
+7.	Implementação das telas:
+a.	Criação das telas
+
+8.	Implementação física do banco de dados:
+a.	Criação de todas as DDL do banco
+b.	Criação de todas as DML do banco
+c.	Construir fisicamente o banco
+
+9.	Implementação do sistema:
+a.	Criação das classes modelo
+b.	Criação da classe de conexão com banco de dados
+c.	Criação das classes de transação com banco de dados
+d.	Criação das classes de serviços
+
+10.	Apresentação do projeto:
+a.	Apresentação do projeto para o cliente (instrutor), aonde o grupo deve explicar e defender seu projeto.
