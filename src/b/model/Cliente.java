@@ -28,6 +28,11 @@ public class Cliente implements Serializable {
 	private String CpfCliente;
 	private String TelefoneCliente;
 	private String EmailCliente;
+	private String LoginCliente;
+	private String SenhaCliente;
+	private String NascimentoCliente;
+	private String dddCliente;
+	
 
 	public Cliente() {
 		
@@ -86,6 +91,26 @@ public class Cliente implements Serializable {
 
 	public String getEmailCliente() {
 		return EmailCliente;
+	}
+
+
+	public String getLoginCliente() {
+		return LoginCliente;
+	}
+
+
+	public void setLoginCliente(String loginCliente) {
+		LoginCliente = loginCliente;
+	}
+
+
+	public String getSenhaCliente() {
+		return SenhaCliente;
+	}
+
+
+	public void setSenhaCliente(String senhaCliente) {
+		SenhaCliente = senhaCliente;
 	}
 
 
