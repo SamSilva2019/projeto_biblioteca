@@ -1,18 +1,14 @@
-package Biblioteca.model;
+package b.model;
 
 import java.io.Serializable;
-import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
-import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 @Entity
-@Table(name="tbl_funcionario")
+@Table(name="tb_Funcionario")
 public class Funcionario implements Serializable {
 
 	
@@ -34,11 +30,11 @@ public class Funcionario implements Serializable {
 		
 	
 	
-	@ManyToMany
-	@JoinTable(name="FunciEnd", joinColumns=
-	{@JoinColumn(name="IdFuncionario")}, inverseJoinColumns=
-	{@JoinColumn(name="IdEndereco")})
-	private List<Endereco> Endereco;
+	//@ManyToMany
+	//@JoinTable(name="FunciEnd", joinColumns=
+//	{@JoinColumn(name="IdFuncionario")}, inverseJoinColumns=
+	//{@JoinColumn(name="IdEndereco")})
+//	private List<Endereco> Endereco;
 	
 	public Funcionario() {
 		
@@ -68,13 +64,13 @@ public class Funcionario implements Serializable {
 		this.idadeFuncionario = idadeFuncionario;
 	}
 
-	public List<Endereco> getEndereco() {
-		return Endereco;
-	}
+	//public List<Endereco> getEndereco() {
+	//	return Endereco;
+//	}
 
-	public void setEndereco(List<Endereco> endereco) {
-		Endereco = endereco;
-	}
+//	public void setEndereco(List<Endereco> endereco) {
+//		Endereco = endereco;
+//	}
 
 	
 	

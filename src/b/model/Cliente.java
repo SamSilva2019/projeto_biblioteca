@@ -1,17 +1,11 @@
-package Biblioteca.model;
+package b.model;
 
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
-import javax.persistence.ManyToMany;
-import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 
@@ -34,29 +28,7 @@ public class Cliente implements Serializable {
 	private String CpfCliente;
 	private String TelefoneCliente;
 	private String EmailCliente;
-	
-	@OneToOne(mappedBy="IdEmprestimo")
-	private List<Emprestimo> emprestimoItems = new ArrayList<Emprestimo>();
-	
-	
-	//ManyToMany acontece em  apenas um dos lado e tem o lado "dominante", ou seja, apenas um dos lados
-	//pode afetar diretamente a tabela criada pelo @JoinTable
-	
-	//Quando definimos o joinColumns estamos dizendo quem é o lado dominante e quando definimos o 
-	//inverseJoinColumns estamos definindo o lado dominado
-	
-	
-	
-	@ManyToMany
-	@JoinTable(name="ClienEndereco"
-	,joinColumns={@JoinColumn(name="idCliente")}//LADO DOMINANTE!
-	
-	,inverseJoinColumns={@JoinColumn(name="IdEndereco")})//LADO DOMINADO!
-	private List<Endereco> endereco = new ArrayList<Endereco>();
-	
-	
-		
-	
+
 	public Cliente() {
 		
 	}
@@ -122,24 +94,7 @@ public class Cliente implements Serializable {
 	}
 
 
-	public List<Emprestimo> getEmprestimoItems() {
-		return emprestimoItems;
-	}
-
-
-	public void setEmprestimoItems(List<Emprestimo> emprestimoItems) {
-		this.emprestimoItems = emprestimoItems;
-	}
-
-
-	public List<Endereco> getEndereco() {
-		return endereco;
-	}
-
-
-	public void setEndereco(List<Endereco> endereco) {
-		this.endereco = endereco;
-	}
+	
 
 	
 }
