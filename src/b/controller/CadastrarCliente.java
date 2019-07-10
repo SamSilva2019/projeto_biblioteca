@@ -30,7 +30,8 @@ public class CadastrarCliente extends HttpServlet {
 			c.setLoginCliente(request.getParameter("login"));
 			c.setSenhaCliente(request.getParameter("senha"));
 			c.setNascimentoCliente(request.getParameter("nascimento"));
-			c.setNascimentoCliente(request.getParameter("ddd"));
+			c.setDddCliente(request.getParameter("ddd"));
+			c.setCepCliente(request.getParameter("cep"));
 			
 			
 			

@@ -32,10 +32,22 @@ public class Cliente implements Serializable {
 	private String SenhaCliente;
 	private String NascimentoCliente;
 	private String dddCliente;
+	private String cepCliente;
+	
 	
 
 	public Cliente() {
 		
+	}
+
+
+	public String getCepCliente() {
+		return cepCliente;
+	}
+
+
+	public void setCepCliente(String cepCliente) {
+		this.cepCliente = cepCliente;
 	}
 
 
@@ -116,6 +128,26 @@ public class Cliente implements Serializable {
 
 	public void setEmailCliente(String emailCliente) {
 		EmailCliente = emailCliente;
+	}
+
+
+	public String getNascimentoCliente() {
+		return NascimentoCliente;
+	}
+
+
+	public void setNascimentoCliente(String nascimentoCliente) {
+		NascimentoCliente = nascimentoCliente;
+	}
+
+
+	public String getDddCliente() {
+		return dddCliente;
+	}
+
+
+	public void setDddCliente(String dddCliente) {
+		this.dddCliente = dddCliente;
 	}
 
 
