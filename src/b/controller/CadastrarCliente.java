@@ -9,7 +9,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import b.model.Cliente;
+import b.model.Endereco;
 import b.persistence.DAOCliente;
+import b.persistence.DAOEndereco;
 
 @WebServlet("/CadastrarCliente")
 public class CadastrarCliente extends HttpServlet {
@@ -22,6 +24,7 @@ public class CadastrarCliente extends HttpServlet {
 		try{
 
 			Cliente c= new Cliente();
+			Endereco e = new Endereco();
 			c.setNomeCliente(request.getParameter("nome"));
 			c.setIdadeCliente(request.getParameter("idade"));
 			c.setCpfCliente(request.getParameter("cpf"));
@@ -31,18 +34,26 @@ public class CadastrarCliente extends HttpServlet {
 			c.setSenhaCliente(request.getParameter("senha"));
 			c.setNascimentoCliente(request.getParameter("nascimento"));
 			c.setDddCliente(request.getParameter("ddd"));
-			c.setCepCliente(request.getParameter("cep"));
+			e.setTipoLEndereco(request.getParameter("tipol"));
+			e.setNomeEndereco(request.getParameter("logradouro"));
+			e.setBairroEndereco(request.getParameter("bairro"));
+			e.setCepEndereco(request.getParameter("cep"));
+			e.setNumerEndereco(request.getParameter("numero"));
+			e.setEstadoEndereco(request.getParameter("estado"));
+
+			e.setCliente(c);
+			e.setEditora(null);
+			e.setFuncionario(null);
 			
 			
-			
-			
-			//DAO -> cadastra o objeto funcionario(func) no banco
+		
 			DAOCliente dao = new DAOCliente();
-			dao.cadastrar(c);
-			//caso tenha cadastrado, envia uma mensagem de confirmação
-			// {$servMensagem} deve ser utilizado na página jsp
+			DAOEndereco dao2 = new DAOEndereco();
+				dao.cadastrar(c);
+				dao2.cadastrar(e);
+
 			request.setAttribute("servMensagem", "Cadastrado!");
-			//
+			
 		}catch(Exception e) {
 			 e.printStackTrace();
 			request.setAttribute("servMensagem", "Erro!");

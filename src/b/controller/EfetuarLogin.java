@@ -25,6 +25,9 @@ public class EfetuarLogin extends HttpServlet {
 		String nome = request.getParameter("nome");
 		String senha = request.getParameter("senha");
 		
+		
+		
+		
 		Boolean logado = dao.login(nome,senha);
 		
 		if(logado==true) {

@@ -53,11 +53,36 @@
     </div>
 
   </div>
-
 			<div class="boxCep form-group">
+                <label>Tipo Logradouro</label>
+                <input class="form-control" type="text" name="tipol" placeholder="Insira seu cep"   required="" >   
+            </div>
+            			<div class="boxCep form-group">
+                <label>Logradouro</label>
+                <input class="form-control" type="text" name="logradouro" placeholder="Insira seu cep"  required="" >   
+            </div>
+            			<div class="boxCep form-group">
+                <label>Bairro</label>
+                <input class="form-control" type="text" name="bairro" placeholder="Insira seu cep" required="" >   
+            </div>
+            			<div class="boxCep form-group">
                 <label>Cep</label>
                 <input class="form-control" type="text" name="cep" placeholder="Insira seu cep" maxlength="9"  onkeypress="this.value = FormatarCep(event)" onpaste="return false;" required="" >   
             </div>
+			<div class="boxCep form-group">
+                <label>Numero</label>
+                <input class="form-control" type="text" name="numero" placeholder="Insira seu cep"  required="" >   
+            </div>
+            <div class="col-md-3 form-group">
+   <label>Estado</label>
+                <select class="form-control" name="estado">
+                    <option>   </option>
+                    <option>RJ</option>
+                    <option>SP</option>
+                    <option>MG</option>
+                    <option>SC</option>
+                </select>
+    </div>
 							<div class="boxEmail form-group">
                 <label>Email</label>
                 <input name="email" class="form-control" type="email" placeholder="Insira o seu email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" >

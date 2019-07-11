@@ -1,11 +1,14 @@
 package b.model;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 
@@ -32,23 +35,17 @@ public class Cliente implements Serializable {
 	private String SenhaCliente;
 	private String NascimentoCliente;
 	private String dddCliente;
-	private String cepCliente;
 	
 	
+	 @OneToMany(mappedBy="cliente")
+	 private List<Endereco> endereco = new ArrayList<>();
 
 	public Cliente() {
 		
 	}
 
 
-	public String getCepCliente() {
-		return cepCliente;
-	}
 
-
-	public void setCepCliente(String cepCliente) {
-		this.cepCliente = cepCliente;
-	}
 
 
 	public Integer getIdCliente() {
@@ -148,6 +145,16 @@ public class Cliente implements Serializable {
 
 	public void setDddCliente(String dddCliente) {
 		this.dddCliente = dddCliente;
+	}
+
+
+	public List<Endereco> getEndereco() {
+		return endereco;
+	}
+
+
+	public void setEndereco(List<Endereco> endereco) {
+		this.endereco = endereco;
 	}
 
 

@@ -6,6 +6,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 
@@ -23,12 +25,25 @@ public class Endereco implements Serializable  {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Integer IdEndereco;
+	private String TipoLEndereco;
 	private String NomeEndereco;
 	private String BairroEndereco;
 	private String CepEndereco;
 	private String NumerEndereco;
+	private String EstadoEndereco;
 	
-	
+	 @ManyToOne
+	 @JoinColumn(name="IdCliente")
+	 private Cliente cliente;
+	 
+	 @ManyToOne
+	 @JoinColumn(name="editora_endereco")
+	 private Editora editora;
+	 
+	 
+	 @ManyToOne
+	 @JoinColumn(name="funcionario_endereco")
+	 private Funcionario funcionario;
 
 	//@ManyToMany(mappedBy="endereco")//mappedBy(lado dominado), a pessoa é dona daquele endereço
 	//private List<Cliente> Cliente;
@@ -39,6 +54,76 @@ public class Endereco implements Serializable  {
 		
 	public Endereco() {
 		
+	}
+
+
+
+
+	public String getEstadoEndereco() {
+		return EstadoEndereco;
+	}
+
+
+
+
+	public void setEstadoEndereco(String estadoEndereco) {
+		EstadoEndereco = estadoEndereco;
+	}
+
+
+
+
+	public String getTipoLEndereco() {
+		return TipoLEndereco;
+	}
+
+
+
+
+	public void setTipoLEndereco(String tipoLEndereco) {
+		TipoLEndereco = tipoLEndereco;
+	}
+
+
+
+
+	public Cliente getCliente() {
+		return cliente;
+	}
+
+
+
+
+	public void setCliente(Cliente cliente) {
+		this.cliente = cliente;
+	}
+
+
+
+
+	public Editora getEditora() {
+		return editora;
+	}
+
+
+
+
+	public void setEditora(Editora editora) {
+		this.editora = editora;
+	}
+
+
+
+
+	public Funcionario getFuncionario() {
+		return funcionario;
+	}
+
+
+
+
+	public void setFuncionario(Funcionario funcionario) {
+		this.funcionario = funcionario;
 	}
 
 

@@ -10,7 +10,7 @@ public class DAOCliente extends DAO {
 	@SuppressWarnings("rawtypes")
 	public boolean login(String nome, String senha){
 		
-		String sql = "from cliente as c where c.nome=:vNome AND c.senha=:vSenha";
+		String sql = "from tb_cliente as c where c.LoginCliente=:vNome AND c.SenhaCliente=:vSenha";
 		
 		javax.persistence.Query query = 
 				entityManager.createQuery(sql);

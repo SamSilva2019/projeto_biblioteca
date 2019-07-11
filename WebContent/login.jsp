@@ -25,7 +25,7 @@
 		<form method="post" action="EfetuarLogin">
 
 			<div class="form-group">
-				<label>Nome:</label> <input name="login" type="text"
+				<label>Login:</label> <input name="nome" type="text"
 					class="form-control" />
 			</div>
 
