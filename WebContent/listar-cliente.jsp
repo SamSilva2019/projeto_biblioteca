@@ -16,7 +16,7 @@
 	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
 	crossorigin="anonymous">
 
-<title>Lista Produto</title>
+<title>Lista Cliente</title>
 </head>
 <body>
 
@@ -35,6 +35,7 @@
 			<tr>
 				<th scope="col">Id</th>
 				<th scope="col">Nome</th>
+				<th scope="col">Login</th>
 				<th scope="col">Senha</th>
 		
 
@@ -44,6 +45,7 @@
 		<c:forEach var="c" items="${dao.lista}">
 			<tr>
 			<td>${c.id}</td>
+			<td>${c.nome}</td>
 			<td>${c.login}</td>
 			<td>${c.senha}</td>
 			

@@ -13,9 +13,11 @@
         <a class="nav-link" href="AbrirCadastroCliente">Cadastro de CLiente</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="AbrirListaCliente">Lista de Cliente</a>
+        <a class="nav-link" href="ListarCliente">Lista de Cliente</a>
       </li>
-  
+      <li class="nav-item">
+        <a class="nav-link" href="CadastrarFuncionario">Cadastro de Funcinario</a>
+      </li>
      
     </ul>
 
