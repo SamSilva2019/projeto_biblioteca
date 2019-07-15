@@ -17,14 +17,15 @@ public class AbrirListaCliente extends HttpServlet {
 
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+	
+		request.getRequestDispatcher("listar-cliente.jsp").forward(request,response);
 		
 	//	User.verifica(request , response);
 
-		DAOCliente dao = new DAOCliente();
-		request.setAttribute("lista", dao.getLista());
-		System.out.println(dao.getLista().size());
-		request.getRequestDispatcher("listar-cliente.jsp").forward(request, response);
+		//DAOCliente dao = new DAOCliente();
+		//request.setAttribute("lista", dao.getLista());
+		//System.out.println(dao.getLista().size());
+		//request.getRequestDispatcher("listar-cliente.jsp").forward(request, response);
 		
 	}
 }
