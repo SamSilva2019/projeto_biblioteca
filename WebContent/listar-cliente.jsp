@@ -34,7 +34,25 @@
 				<th scope="col">Nome</th>
 				<th scope="col">Login</th>
 				<th scope="col">Senha</th>
+<<<<<<< HEAD
 
+=======
+		
+
+				
+				
+			</tr>
+		<c:forEach var="c" items="${dao.lista}">
+			<tr>
+			<td>${c.id}</td>
+			<td>${c.nome}</td>
+			<td>${c.login}</td>
+			<td>${c.senha}</td>
+			
+	
+			<th><a href="VisualizarCliente?id=${c.id}">ATUALIZAR</a></th>
+			<th><a href="ExcluirCliente?id=${c.id}">EXCLUIR</a></th>
+>>>>>>> a23c41c2dfee356a79a6f7acf3568f585b6a5604
 			</tr>
 			<c:forEach var="c" items="${lista}">
 				<tr>

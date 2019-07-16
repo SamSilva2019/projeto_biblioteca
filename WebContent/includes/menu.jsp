@@ -13,6 +13,7 @@
         <a class="nav-link" href="AbrirCadastroCliente">Cadastro de CLiente</a>
       </li>
       <li class="nav-item">
+<<<<<<< HEAD
         <a class="nav-link" href="AbrirCadastroCliente">Cadastro de Funcionario</a>
       </li>
        <li class="nav-item">
@@ -20,6 +21,12 @@
       </li>
       <li class="nav-item">
         <a class="nav-link" href="AbrirListaCliente">Lista de Funcionario</a>
+=======
+        <a class="nav-link" href="ListarCliente">Lista de Cliente</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="CadastrarFuncionario">Cadastro de Funcinario</a>
+>>>>>>> a23c41c2dfee356a79a6f7acf3568f585b6a5604
       </li>
      
     </ul>
