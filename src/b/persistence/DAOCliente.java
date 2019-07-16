@@ -37,7 +37,7 @@ public class DAOCliente extends DAO {
 
 	@SuppressWarnings("unchecked")
 	public List<Cliente> getLista(){
-		return entityManager.createQuery("from tb_cliente c").getResultList();
+		return entityManager.createQuery("from Cliente c").getResultList();
 	
 	}
 	

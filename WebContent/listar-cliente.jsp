@@ -29,8 +29,7 @@
 	</div>
 	</c:if>
 	
-		<jsp:useBean id="dao" class="b.persistence.DAOCliente"></jsp:useBean>
-		
+				
 		<table class="table">
 			<tr>
 				<th scope="col">Id</th>
@@ -39,12 +38,12 @@
 				<th scope="col">Senha</th>
 		
 			</tr>
-		<c:forEach var="c" items="${dao.lista}">
+		<c:forEach var="c" items="${lista}">
 			<tr>
 			<td>${c.id}</td>
-			<td>${c.nome}</td>
-			<td>${c.login}</td>
-			<td>${c.senha}</td>
+			<td>${c.nomeCliente}</td>
+			<td>${c.LoginCliente}</td>
+			<td>${c.SenhaCliente}</td>
 			
 	
 			<th><a href="VisualizarCliente?id=${c.id}">ATUALIZAR</a></th>

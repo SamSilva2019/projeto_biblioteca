@@ -25,39 +25,26 @@
  
  <div class="form-group">
  <label>Nome:</label>
- <input name="nome" value="${c.nome}" type="text" class="form-control" /> 
+ <input name="nome" value="${c.nomeCliente}" type="text" class="form-control" /> 
  </div>
  
- <div class="form-group">
- <label>Endereco:</label>
- <input name="endereco" value="${c.endereco}" type="text" class="form-control" /> 
- </div>
- 
- <div class="form-group">
- <label>Telefone:</label>
- <input name="telefone" value="${c.telefone}" type="text" class="form-control" /> 
- </div>
  
   <div class="form-group">
  <label>Email:</label>
- <input name="email" value="${c.email}" type="text" class="form-control" /> 
+ <input name="email" value="${c.EmailCliente}" type="text" class="form-control" /> 
  </div>
  
  <div class="form-group">
- <label>Cidade:</label>
- <input name="cidade" value="${c.cidade}" type="text" class="form-control" /> 
+ <label>Login:</label>
+ <input name="email" value="${c.LoginCliente}" type="text" class="form-control" /> 
  </div>
  
  <div class="form-group">
- <label>Estado:</label>
- <input name="estado" value="${c.estado}" type="text" class="form-control" /> 
+ <label>Login:</label>
+ <input name="email" value="${c.LoginCliente}" type="text" class="form-control" /> 
  </div>
  
- <div class="form-group">
- <label>Cep:</label>
- <input name="cep" value="${c.cep}" type="text" class="form-control" /> 
- </div>
- 
+
  <input type="submit" value="Atualizar" />
 
 </form>
