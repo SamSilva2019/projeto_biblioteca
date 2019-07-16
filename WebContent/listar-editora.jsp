@@ -16,7 +16,7 @@
 	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
 	crossorigin="anonymous">
 
-<title>Lista Cliente</title>
+<title>Lista Editora</title>
 </head>
 <body>
 
@@ -32,19 +32,16 @@
 			<tr>
 				<th scope="col">Id</th>
 				<th scope="col">Nome</th>
-				<th scope="col">Login</th>
-				<th scope="col">Senha</th>
+			
 
 			</tr>
 			<c:forEach var="c" items="${lista}">
 				<tr>
-					<td>${c.idCliente}</td>
-					<td>${c.nomeCliente}</td>
-					<td>${c.loginCliente}</td>
-					<td>${c.senhaCliente}</td>
-
-					<th><a href="VisualizarCliente?id=${c.idCliente}">ATUALIZAR</a></th>
-					<th><a href="ExcluirCliente?id=${c.idCliente}">EXCLUIR</a></th>
+					<td>${c.IdEditora}</td>
+					<td>${c.nomeEditora}</td>
+					
+					<th><a href="VisualizarCliente?id=${c.IdEditora}">ATUALIZAR</a></th>
+					<th><a href="ExcluirCliente?id=${c.IdEditora}">EXCLUIR</a></th>
 				</tr>
 			</c:forEach>
 

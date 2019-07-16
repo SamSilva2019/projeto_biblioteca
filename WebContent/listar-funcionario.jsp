@@ -29,8 +29,6 @@
 	</div>
 	</c:if>
 	
-		<jsp:useBean id="dao" class="b.persistence.DAOFuncionario"></jsp:useBean>
-		
 		<table class="table">
 			<tr>
 				<th scope="col">Id Funcionario</th>
@@ -43,16 +41,16 @@
 			</tr>
 		<c:forEach var="f" items="${dao.lista}">
 			<tr>
-			<td>${f.id}</td>
+			<td>${f.idFuncionario}</td>
 			<td>${f.nomeFuncionario}</td>
 			<td>${f.idadeFuncionario}</td>
-			<td>${f.Dtadmissao}</td>
-			<td>${f.Salario}</td>
+			<td>${f.dtadmissao}</td>
+			<td>${f.salario}</td>
 			
 			
 	
-			<th><a href="VisualizarFuncionario?id=${f.id}">ATUALIZAR</a></th>
-			<th><a href="ExcluirFuncionario?id=${f.id}">EXCLUIR</a></th>
+			<th><a href="VisualizarFuncionario?id=${f.idFuncionario}">ATUALIZAR</a></th>
+			<th><a href="ExcluirFuncionario?id=${f.idFuncionario}">EXCLUIR</a></th>
 			</tr>
 		</c:forEach>
 		

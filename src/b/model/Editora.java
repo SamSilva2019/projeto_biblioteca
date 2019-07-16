@@ -22,7 +22,7 @@ public class Editora implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Integer IdEditora;
-	private String NomeEditora;
+	private String nomeEditora;
 	
 	 @OneToMany(mappedBy="editora")
 	 private List<Endereco> endereco = new ArrayList<>();
@@ -54,11 +54,11 @@ public class Editora implements Serializable {
 	}
 
 	public String getNomeEditora() {
-		return NomeEditora;
+		return nomeEditora;
 	}
 
 	public void setNomeEditora(String nomeEditora) {
-		NomeEditora = nomeEditora;
+		nomeEditora = nomeEditora;
 	}
 
 //	public List<Endereco> getEndereco() {

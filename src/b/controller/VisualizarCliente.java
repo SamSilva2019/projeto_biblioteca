@@ -20,8 +20,8 @@ public class VisualizarCliente extends HttpServlet {
 		Cliente c = new Cliente();
 		
 		//c.setId(Integer.parseInt(request.getParameter("id")));
-		c.setLogin(request.getParameter("login"));
-		c.setSenha(request.getParameter("senha"));
+		c.setLoginCliente(request.getParameter("login"));
+		c.setSenhaCliente(request.getParameter("senha"));
 
 		
 		DAOCliente dao = new DAOCliente();

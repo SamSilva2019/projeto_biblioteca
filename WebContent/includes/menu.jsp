@@ -19,7 +19,7 @@
         <a class="nav-link" href="AbrirListaCliente">Lista de Cliente</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="AbrirListaFuncionario">Lista de Funcionario</a>
+        <a class="nav-link" href="AbrirListaCliente">Lista de Funcionario</a>
       </li>
      
     </ul>

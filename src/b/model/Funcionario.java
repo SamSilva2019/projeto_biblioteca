@@ -25,8 +25,8 @@ public class Funcionario implements Serializable {
 	private String idadeFuncionario;
 	private String login;
 	private Integer senha;
-	private Date Dtadmissao;
-	private Double Salario;
+	private Date dtadmissao;
+	private Double salario;
 
 	
 	 @OneToMany(mappedBy="funcionario")
@@ -50,40 +50,60 @@ public class Funcionario implements Serializable {
 		
 	}
 
-	public Integer getIdFuncionario() {
+	public Integer getidFuncionario() {
 		return idFuncionario;
 	}
 
-	public String getLogin() {
+	public void setidFuncionario(Integer idFuncionario) {
+		this.idFuncionario = idFuncionario;
+	}
+
+	public String getnomeFuncionario() {
+		return nomeFuncionario;
+	}
+
+	public void setnomeFuncionario(String nomeFuncionario) {
+		this.nomeFuncionario = nomeFuncionario;
+	}
+
+	public String getidadeFuncionario() {
+		return idadeFuncionario;
+	}
+
+	public void setidadeFuncionario(String idadeFuncionario) {
+		this.idadeFuncionario = idadeFuncionario;
+	}
+
+	public String getlogin() {
 		return login;
 	}
 
-	public void setLogin(String login) {
+	public void setlogin(String login) {
 		this.login = login;
 	}
 
-	public Integer getSenha() {
+	public Integer getsenha() {
 		return senha;
 	}
 
-	public void setSenha(Integer senha) {
+	public void setsenha(Integer senha) {
 		this.senha = senha;
 	}
 
-	public Date getDtadmissao() {
-		return Dtadmissao;
+	public Date getdtadmissao() {
+		return dtadmissao;
 	}
 
-	public void setDtadmissao(Date dtadmissao) {
-		Dtadmissao = dtadmissao;
+	public void setdtadmissao(Date dtadmissao) {
+		this.dtadmissao = dtadmissao;
 	}
 
-	public Double getSalario() {
-		return Salario;
+	public Double getsalario() {
+		return salario;
 	}
 
-	public void setSalario(Double salario) {
-		Salario = salario;
+	public void setsalario(Double salario) {
+		this.salario = salario;
 	}
 
 	public List<Endereco> getEndereco() {
@@ -94,25 +114,8 @@ public class Funcionario implements Serializable {
 		this.endereco = endereco;
 	}
 
-	public void setIdFuncionario(Integer idFuncionario) {
-		this.idFuncionario = idFuncionario;
-	}
-
-	public String getNomeFuncionario() {
-		return nomeFuncionario;
-	}
-
-	public void setNomeFuncionario(String nomeFuncionario) {
-		this.nomeFuncionario = nomeFuncionario;
-	}
-
-	public String getIdadeFuncionario() {
-		return idadeFuncionario;
-	}
-
-	public void setIdadeFuncionario(String idadeFuncionario) {
-		this.idadeFuncionario = idadeFuncionario;
-	}
+	
+	
 
 	//public List<Endereco> getEndereco() {
 	//	return Endereco;

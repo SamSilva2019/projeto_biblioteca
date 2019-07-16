@@ -11,154 +11,117 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
-
-
-
 @Entity
-@Table(name="tb_Cliente")
+@Table(name = "tb_Cliente")
 public class Cliente implements Serializable {
 
-	
 	private static final long serialVersionUID = 1L;
-	
-	
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer IdCliente;
-	private String  nomeCliente;
-	private String  idadeCliente;
-	private String CpfCliente;
-	private String TelefoneCliente;
-	private String EmailCliente;
-	private String LoginCliente;
-	private String SenhaCliente;
-	private String NascimentoCliente;
+	private Integer idCliente;
+	private String nomeCliente;
+	private String idadeCliente;
+	private String cpfCliente;
+	private String telefoneCliente;
+	private String emailCliente;
+	private String loginCliente;
+	private String senhaCliente;
+	private String nascimentoCliente;
 	private String dddCliente;
-	
-	
-	 @OneToMany(mappedBy="cliente")
-	 private List<Endereco> endereco = new ArrayList<>();
+
+	@OneToMany(mappedBy = "cliente")
+	private List<Endereco> endereco = new ArrayList<>();
 
 	public Cliente() {
-		
+
 	}
-
-
-
-
 
 	public Integer getIdCliente() {
-		return IdCliente;
+		return idCliente;
 	}
-
 
 	public void setIdCliente(Integer idCliente) {
-		IdCliente = idCliente;
+		this.idCliente = idCliente;
 	}
-
 
 	public String getNomeCliente() {
 		return nomeCliente;
 	}
 
-
 	public void setNomeCliente(String nomeCliente) {
 		this.nomeCliente = nomeCliente;
 	}
-
 
 	public String getIdadeCliente() {
 		return idadeCliente;
 	}
 
-
 	public void setIdadeCliente(String idadeCliente) {
 		this.idadeCliente = idadeCliente;
 	}
 
-
 	public String getCpfCliente() {
-		return CpfCliente;
+		return cpfCliente;
 	}
-
 
 	public void setCpfCliente(String cpfCliente) {
-		CpfCliente = cpfCliente;
+		this.cpfCliente = cpfCliente;
 	}
-
 
 	public String getTelefoneCliente() {
-		return TelefoneCliente;
+		return telefoneCliente;
 	}
-
 
 	public void setTelefoneCliente(String telefoneCliente) {
-		TelefoneCliente = telefoneCliente;
+		this.telefoneCliente = telefoneCliente;
 	}
-
 
 	public String getEmailCliente() {
-		return EmailCliente;
+		return emailCliente;
 	}
-
-
-	public String getLoginCliente() {
-		return LoginCliente;
-	}
-
-
-	public void setLoginCliente(String loginCliente) {
-		LoginCliente = loginCliente;
-	}
-
-
-	public String getSenhaCliente() {
-		return SenhaCliente;
-	}
-
-
-	public void setSenhaCliente(String senhaCliente) {
-		SenhaCliente = senhaCliente;
-	}
-
 
 	public void setEmailCliente(String emailCliente) {
-		EmailCliente = emailCliente;
+		this.emailCliente = emailCliente;
 	}
 
+	public String getLoginCliente() {
+		return loginCliente;
+	}
+
+	public void setLoginCliente(String loginCliente) {
+		this.loginCliente = loginCliente;
+	}
+
+	public String getSenhaCliente() {
+		return senhaCliente;
+	}
+
+	public void setSenhaCliente(String senhaCliente) {
+		this.senhaCliente = senhaCliente;
+	}
 
 	public String getNascimentoCliente() {
-		return NascimentoCliente;
+		return nascimentoCliente;
 	}
-
 
 	public void setNascimentoCliente(String nascimentoCliente) {
-		NascimentoCliente = nascimentoCliente;
+		this.nascimentoCliente = nascimentoCliente;
 	}
-
 
 	public String getDddCliente() {
 		return dddCliente;
 	}
 
-
 	public void setDddCliente(String dddCliente) {
 		this.dddCliente = dddCliente;
 	}
-
 
 	public List<Endereco> getEndereco() {
 		return endereco;
 	}
 
-
 	public void setEndereco(List<Endereco> endereco) {
 		this.endereco = endereco;
 	}
-
-
-	
-
-	
 }

@@ -8,18 +8,18 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import b.persistence.DAOCliente;
+import b.persistence.DAOFuncionario;
 
 @WebServlet("/AbrirListaCliente")
-public class AbrirListaCliente extends HttpServlet {
+public class AbrirListaFuncionario extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
-		DAOCliente dao = new DAOCliente();
+		DAOFuncionario dao = new DAOFuncionario();
 
 		request.setAttribute("lista", dao.getLista());
-		request.getRequestDispatcher("listar-cliente.jsp").forward(request, response);
+		request.getRequestDispatcher("listar-funcionario.jsp").forward(request, response);
 	}
 }
